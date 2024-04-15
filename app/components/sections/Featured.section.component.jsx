@@ -1,8 +1,6 @@
 'use client'
-import { Player } from "@lottiefiles/react-lottie-player";
-import Image from 'next/image'
-import TypeIt from "typeit-react";
 import SectionHeader from "./SectionHeader.component";
+
 
 function SpotlightText(props) {
 	const { title, desc, features } = props;

@@ -1,8 +1,8 @@
 'use client'
 
 import SectionHeader from "./SectionHeader.component";
-import { Player } from "@lottiefiles/react-lottie-player";
-
+import dynamic from 'next/dynamic';
+const Player = dynamic(() => import('@lottiefiles/react-lottie-player').then((lot) => lot.Player), { ssr: false });
 
 export default function AboutSection(props) {
 

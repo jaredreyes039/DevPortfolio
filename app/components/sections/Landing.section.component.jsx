@@ -1,39 +1,13 @@
 'use client'
-import { Player } from '@lottiefiles/react-lottie-player';
-import Image from "next/image"
-import BRAIN_SVG from "../../../public/brain.svg"
 import TypeIt from "typeit-react";
 import { useEffect, useRef, useState } from "react";
+import dynamic from 'next/dynamic';
+
+const Player = dynamic(() => import('@lottiefiles/react-lottie-player').then((lot) => lot.Player), { ssr: false });
 
 export default function LandingSection(props) {
 
-	const [bouncePhraseArr, setBouncePhraseArr] = useState([]);
-	const bouncePhrase = " Software Engineer"
 
-	const handleHoverLeave = (e) => {
-		let element = document.getElementById(e.currentTarget.id);
-		setTimeout(() => { element.classList.remove("animation-fadeout") }, 500)
-		element.style.opacity = 1;
-	}
-
-	const handleHoverEnter = (e) => {
-		let element = document.getElementById(e.currentTarget.id);
-		element.classList.add("animation-fadeout")
-	}
-
-	useEffect(() => {
-		let letterArr = [];
-		for (let i = 0; i < bouncePhrase.length; i++) {
-			letterArr.push(bouncePhrase.charAt(i))
-		}
-		setBouncePhraseArr([...letterArr])
-	}, [])
-
-	function handleRemoveScrollElement(e) {
-		e.preventDefault();
-		let element = document.getElementById(e.currentTarget.id);
-		element.classList.add("hidden");
-	}
 
 	return (
 		<>
