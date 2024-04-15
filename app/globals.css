@@ -46,28 +46,21 @@ body {
 @keyframes progress{
   0%{
     width: 0%;
-}
-100% {
-  width: attr(ratio);
-}
+  }
+  100% {
+    width: attr(ratio);
+  }
 }
 
 @keyframes hovering {
   0%{
     bottom: -80px;
-}
-100%{
+  }
+  100%{
     bottom: -90px;
-}
+  }
 }
 
-.cube {
-  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(-15deg);
-}
-.cube-wrap {
-  perspective: 1000px;
-  perspective-origin: 50% 33%;
-}
 .hidden {
   display: none;
 }
@@ -76,50 +69,6 @@ body {
   	background: linear-gradient(-45deg, #86efac, #CD46A5, #CDB246, #46cd6e);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-}
-.ocean { 
-  height: 5%;
-  width:100%;
-  position:absolute;
-  bottom:0;
-  left:0;
-  border-radius: 0px 0px 8px 8px;
-  filter: hue-rotate(323deg);
-  background: #015871;
-}
-
-.wave {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
-  position: absolute;
-  top: -198px;
-  width: 6400px;
-  height: 198px;
-  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0);
-}
-
-.wave:nth-of-type(2) {
-  top: -175px;
-  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-  opacity: 1;
-}
-
-@keyframes wave {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: -1600px;
-  }
-}
-
-@keyframes swell {
-  0%, 100% {
-    transform: translate3d(0,-25px,0);
-  }
-  50% {
-    transform: translate3d(0,5px,0);
-  }
 }
 .animation-bounce{
   top: 0px;
@@ -167,9 +116,8 @@ body {
     background-position: 1500% 0%;
     }
   100% {
-  background-position: 0% 0%;
-
-}
+    background-position: 0% 0%;
+  }
 }
 
 @keyframes pulsing {
@@ -177,10 +125,10 @@ body {
     scale: 1;
     opacity: 0.5;
 }
-100% {
-  scale: 1.05;
-  opacity: 0.65;
-}
+  100% {
+    scale: 1.05;
+    opacity: 0.65;
+  }
 }
 
 @keyframes fadeOut {
@@ -188,7 +136,7 @@ body {
     opacity: 1;
   }
   100% {
-    opacity: 0.01
+    opacity: 0.01;
   }
 }
 
@@ -196,16 +144,9 @@ body {
   0% {
   opacity: 0.01;
 }
-100% {
+  100% {
   opacity: 1;
-}
+  }
 }
 
-@keyframes bounceLetter {
-  0%{
-    top: -12px;
-  }
-  100%: {
-    top: 12px
-  }
-}
+
