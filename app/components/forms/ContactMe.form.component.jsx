@@ -1,9 +1,9 @@
 'use client'
 import { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify'
 
 export default function ContactMeForm(props) {
 
+	const { toast } = props;
 	const [firstName, setFirstName] = useState("")
 	const [lastName, setLastName] = useState("")
 	const [email, setEmail] = useState("")
@@ -24,7 +24,7 @@ export default function ContactMeForm(props) {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		const res = await fetch("", {
+		const res = await fetch('http://localhost:5000/contact/submit', {
 			headers: {
 				"Content-Type": "application/json"
 			},
@@ -38,7 +38,7 @@ export default function ContactMeForm(props) {
 		})
 		const status = res.status
 		if (status === 200) {
-			toast.success("Contact form sent, expect a reply within 48-72 hours. Thank you for reaching out; talk to you soon!")
+			toast.success("Contact form sent, expect a reply within 48-72 hours. Thank you for reaching out- talk to you soon!")
 		}
 		else {
 			toast.error("Failed to submit form, please try again later.")
@@ -47,9 +47,8 @@ export default function ContactMeForm(props) {
 
 	return (
 		<>
-			<ToastContainer />
 			<div className="flex mobilesc:max-md:flex-col w-full ultrawide:gap-12 justify-center items-center">
-				<div className="ultrawide:w-1/3 md:max-ultrawide:w-1/4 mobilesc:max-md:w-full mobilesc:max-md:mb-4">
+				<div className="ultrawide:w-1/3 xl:w-1/2 xl:mr-6 md:max-ultrawide:w-1/4 mobilesc:max-md:w-full mobilesc:max-md:mb-4">
 					<h1 className="ultrawide:text-4xl ultrawide:mb-4 mobilesc:max-ultrawide:text-2xl text-green-300">Contact Me</h1>
 					<h2 className="ultrawide:text-xl lg:max-ultrawide:text-lg text-white">Looking to bring your small-business to the next level? Maybe you have a hobby you're ready to turn into more than a passion? Whatever the reason, reach out to me and let's see how we can make your presence and experience on the internet that much better!</h2>
 				</div>
