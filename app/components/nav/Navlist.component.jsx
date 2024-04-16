@@ -19,7 +19,7 @@ export default function Navlist(props) {
 							border-2
 							border-white
 							ultrawide:text-xl
-							lg:max-2xl:text-md
+							lg:max-xl:text-md
 							rounded-full
 							text-white
 							hover:bg-opacity-15
@@ -46,7 +46,7 @@ export default function Navlist(props) {
 							mobilesc:max-md:hidden
 							rounded-full
 							ultrawide:text-xl
-							lg:max-2xl:text-md
+							lg:max-xl:text-md
 							text-black
 							hover:bg-opacity-15
 							hover:text-white

@@ -40,7 +40,7 @@ function Spotlight(props) {
 			<div className="absolute overflow-hidden shadow-inner w-full h-96 mobilesc:max-md:h-fit left-0 top-0 rounded-lg hover:scale-105 hover:border-2 hover:border-green-300 duration-150">
 				<video className="w-full h-full rounded-lg" src={videos[idx]} muted autoPlay />
 			</div>
-			<div className="backdrop-blur-lg absolute px-4 py-4 shadow-white drop-shadow-lg ultrawide:w-1/2 lg:max-ultrawide:w-1/3 h-fit ultrawide:-right-48 mobilesc:max-ultrawide:hidden -bottom-64 bg-slate-900 opacity-95 rounded-lg animation-hover">
+			<div className="backdrop-blur-lg absolute px-4 py-4 shadow-white drop-shadow-lg ultrawide:w-1/2 lg:max-ultrawide:w-1/3 h-fit ultrawide:-right-48 xl:right-0 mobilesc:max-xl:hidden bottom-0 bg-slate-900 opacity-95 rounded-lg ">
 				<div className="flex mb-4 items-center gap-4 w-full justify-center">
 					<h1 className="text-green-300 ultrawide:text-2xl">Highlights</h1>
 					<hr className="w-full border-t-2 border-green-300"></hr>
