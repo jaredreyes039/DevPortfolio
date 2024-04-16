@@ -7,7 +7,7 @@ const Player = dynamic(() => import('@lottiefiles/react-lottie-player').then((lo
 
 export default function LandingSection(props) {
 
-
+	const { setElem } = props;
 
 	return (
 		<>
@@ -25,8 +25,8 @@ export default function LandingSection(props) {
 					</TypeIt>
 					<div className="flex gap-8 mobilesc:max-sm:gap-4">
 
-						<button type="button" className="ultrawide:text-2xl bg-white text-black font-bold mobilesc:max-md:py-2 mobilesc:max-md:px-4 md:py-4 md:px-8 hover:opacity-75 duration-100 rounded-full md:w-96 mobilesc:max-md:w-36 hover:border-2 hover:border-green-300">My Story</button>
-						<button type="button" className="hover:border-2 hover:border-white ultrawide:text-2xl bg-green-300 text-black font-black mobilesc:max-md:py-2 mobilesc:max-md:px-4 md:py-4 md:px-8 hover:opacity-75 duration-100 rounded-full md:w-96 mobilesc:max-md:w-36">Contact Me</button>
+						<button onClick={() => { setElem("story") }} type="button" className="ultrawide:text-2xl bg-white text-black font-bold mobilesc:max-md:py-2 mobilesc:max-md:px-4 md:py-4 md:px-8 hover:opacity-75 duration-100 rounded-full md:w-96 mobilesc:max-md:w-36 hover:border-2 hover:border-green-300">My Story</button>
+						<button onClick={() => { setElem("contact") }} type="button" className="hover:border-2 hover:border-white ultrawide:text-2xl bg-green-300 text-black font-black mobilesc:max-md:py-2 mobilesc:max-md:px-4 md:py-4 md:px-8 hover:opacity-75 duration-100 rounded-full md:w-96 mobilesc:max-md:w-36">Contact Me</button>
 					</div>
 				</div>
 				<div className="flex flex-col justify-center w-full bg-shadow h-dvh mobilesc:max-md:h-96 relative">

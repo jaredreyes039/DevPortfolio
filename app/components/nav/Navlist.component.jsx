@@ -1,11 +1,14 @@
-
+'use client'
 
 export default function Navlist(props) {
+
+	const { setElem } = props;
+
 	const ROUTES = [
-		"About Me",
-		"Featured Projects",
-		"Experience",
-		"Contact Me"
+		{ rt: "About Me", elem: "story" },
+		{ rt: "Featured Projects", elem: "feat" },
+		{ rt: "Experience", elem: "exp" },
+		{ rt: "Contact Me", elem: "contact" }
 	]
 
 	return (
@@ -33,9 +36,10 @@ export default function Navlist(props) {
 							hover:border-2
 							hover:border-green-300
 						"
-							key={route + "_" + idx}
+							onClick={() => { setElem(route.elem) }}
+							key={route.rt + "_" + idx}
 						>
-							{route}
+							{route.rt}
 						</button>
 					)
 				}
@@ -61,8 +65,11 @@ export default function Navlist(props) {
 							rounded-4
 							duration-100
 						"
-							key={route + "_" + idx}>
-							{route}
+							onClick={() => {
+								setElem(route.elem)
+							}}
+							key={route.rt + "_" + idx}>
+							{route.rt}
 						</button>
 					)
 				}
