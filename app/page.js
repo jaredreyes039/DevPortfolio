@@ -35,37 +35,43 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    switch (elem) {
-      case "story":
-        scroller.scrollTo("story", {
-          duration: 1500,
-          delay: 100,
-          smooth: true,
-        })
-        break;
-      case "feat":
-        scroller.scrollTo("feat", {
-          duration: 1500,
-          delay: 100,
-          smooth: true,
-        })
-        break;
-      case "exp":
-        scroller.scrollTo("exp", {
-          duration: 1500,
-          delay: 100,
-          smooth: true,
-        })
-        break;
-      case "contact":
-        scroller.scrollTo("contact", {
-          duration: 1500,
-          delay: 100,
-          smooth: true,
-        })
-        break;
-      default:
-        break;
+    if (elem !== null) {
+      switch (elem) {
+        case "story":
+          scroller.scrollTo("story", {
+            duration: 1500,
+            delay: 100,
+            smooth: true,
+          })
+          break;
+        case "feat":
+          scroller.scrollTo("feat", {
+            duration: 1500,
+            delay: 100,
+            smooth: true,
+          })
+          break;
+        case "exp":
+          scroller.scrollTo("exp", {
+            duration: 1500,
+            delay: 100,
+            smooth: true,
+          })
+          break;
+        case "contact":
+          scroller.scrollTo("contact", {
+            duration: 1500,
+            delay: 100,
+            smooth: true,
+          })
+          break;
+        default:
+          break;
+      }
+      setElem(null)
+    }
+    else {
+      return;
     }
   }, [elem])
 
