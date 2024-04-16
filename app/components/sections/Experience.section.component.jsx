@@ -66,11 +66,11 @@ export default function ExperienceSection(props) {
 						return (
 							<>
 								<div class="ml-24 mobilesc:max-md:ml-0 w-1/3 mobilesc:max-md:w-full flex justify-between mb-1">
-									<span class="text-base font-medium text-blue-700 dark:text-white">{skill.title}</span>
-									<span class="text-sm font-medium text-blue-700 dark:text-white">{skill.percent}</span>
+									<span class="text-base font-medium text-white">{skill.title}</span>
+									<span class="text-sm font-medium text-white">{skill.percent}</span>
 								</div>
-								<div key={'sk-' + idx} class="ml-24 mobilesc:max-md:ml-0 w-1/3 bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700 mobilesc:max-md:w-full">
-									<div ratio={skill.percent} class="animation-prog bg-gray-600 h-2.5 rounded-full dark:bg-gray-300" style={{ width: skill.percent }}></div>
+								<div key={'sk-' + idx} class="ml-24 mobilesc:max-md:ml-0 w-1/3 bg-green-300 rounded-full h-2.5 mb-4 dark:bg-gray-700 mobilesc:max-md:w-full">
+									<div ratio={skill.percent} class="animation-prog bg-green-300 h-2.5 rounded-full dark:bg-gray-300" style={{ width: skill.percent }}></div>
 								</div >
 							</>
 						)
