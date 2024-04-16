@@ -38,7 +38,9 @@ function Spotlight(props) {
 	return (
 		<div className="ultrawide:mr-48 ultrawide:min-h-[540px] mobilesc:max-md:min-h-48 lg:max-ultrawide:mr-0 mb-12 mobilesc:max-md:mb-4 px-12 relative ultrawide:w-1/2 lg:max-ultrawide:w-2/3 mobilesc:max-md:w-full ">
 			<div className="absolute overflow-hidden shadow-inner w-full h-96 mobilesc:max-md:h-fit left-0 top-0 rounded-lg hover:scale-105 hover:border-2 hover:border-green-300 duration-150">
-				<video className="w-full h-full rounded-lg" src={videos[idx]} muted autoPlay />
+				<video className="w-full h-full rounded-lg" muted autoPlay>
+					<source src={videos[idx]} type="video/mp4" />
+				</video>
 			</div>
 			<div className="backdrop-blur-lg absolute px-4 py-4 shadow-white drop-shadow-lg ultrawide:w-1/2 lg:max-ultrawide:w-1/3 h-fit ultrawide:-right-48 xl:right-0 mobilesc:max-xl:hidden bottom-0 bg-slate-900 opacity-95 rounded-lg ">
 				<div className="flex mb-4 items-center gap-4 w-full justify-center">
