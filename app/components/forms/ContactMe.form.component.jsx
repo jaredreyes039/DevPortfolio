@@ -24,7 +24,7 @@ export default function ContactMeForm(props) {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		const res = await fetch('http://localhost:5000/contact/submit', {
+		const res = await fetch('https://jaydevdesignapi.azurewebsites.net/submit', {
 			headers: {
 				"Content-Type": "application/json"
 			},
