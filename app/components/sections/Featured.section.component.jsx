@@ -25,8 +25,8 @@ function SpotlightText(props) {
 				})}
 			</ul>
 			<div className="flex flex-col gap-4 self-end">
-				<button className="py-4 px-8 text-black bg-white rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-green-300 font-bold">Visit Site</button>
-				<button className="py-4 px-8 text-black bg-green-300 rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-white font-black">View Source Code</button>
+				<button className="py-4 px-8 mobilesc:max-md:py-2 mobilesc:max-md:px-4 text-black bg-white rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-green-300 font-bold">Visit Site</button>
+				<button className="py-4 px-8 mobilesc:max-md:py-2 mobilesc:max-md:px-4 text-black bg-green-300 rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-white font-black">View Source Code</button>
 
 			</div>
 		</div>

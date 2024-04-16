@@ -14,7 +14,7 @@ module.exports = {
       },
       screens: {
         'ultrawide': '2440px',
-        'mobilesc': '400px',
+        'mobilesc': '350px',
       }
     },
   },

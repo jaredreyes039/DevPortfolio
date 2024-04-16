@@ -59,7 +59,7 @@ export default function ExperienceSection(props) {
 							<em><h1 className="text-green-300 ultrawide:text-2xl">{job.role}</h1></em>
 						</div>
 						<hr className="w-96 border-t-2 border-green-300 mobilesc:max-md:hidden"></hr>
-						<h1 className="w-96 ml-4 text-green-300 ultrawide:text-2xl"><span className="md:max-ultrawide:hidden font-black">Timeline: </span><TypeIt>{job.timeline}</TypeIt></h1>
+						<h1 className="w-96 mobilesc:max-md:w-full ml-4 text-green-300 ultrawide:text-2xl"><TypeIt>{job.timeline}</TypeIt></h1>
 
 					</div>
 					{job.skills.map((skill, idx) => {
