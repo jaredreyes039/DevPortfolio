@@ -25,8 +25,8 @@ function SpotlightText(props) {
 				})}
 			</ul>
 			<div className="flex flex-col gap-4 self-end">
-				<button className="py-4 px-8 mobilesc:max-md:py-2 mobilesc:max-md:px-4 text-black bg-white rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-green-300 font-bold">Visit Site</button>
-				<button className="py-4 px-8 mobilesc:max-md:py-2 mobilesc:max-md:px-4 text-black bg-green-300 rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-white font-black">View Source Code</button>
+				<button className="py-4 px-8 mobilesc:max-md:py-2 mobilesc:max-md:px-4 text-black bg-white rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-green-300 font-bold" onClick={() => { window.location.href = props.src }}>Visit Site</button>
+				<button className="py-4 px-8 mobilesc:max-md:py-2 mobilesc:max-md:px-4 text-black bg-green-300 rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-white font-black" onClick={() => { window.location.href = props.git }}>View Source Code</button>
 
 			</div>
 		</div>
@@ -68,21 +68,41 @@ function Spotlight(props) {
 
 export default function FeaturedSection(props) {
 
-	const SAMPLE_VIDEOS = ['lanceIOA.mp4', 'rapiflyA.mp4']
+	const SAMPLE_VIDEOS = ['medMang.mp4', 'lanceIOA.mp4', 'diagAssist.mp4', 'rapiflyA.mp4']
 	const SPOT_PROJECTS = [
+		{
+			title: "Linux Medication Manager TUI",
+			desc: "The Medication Manager TUI is a bash TUI I made for myself and others with similar situations to not only track our medications, appointments, and mood, but to do so in a sleek, stylish terminal app (you know how us Linux users can be!)",
+			highlights: ["Full bash script using gum as the star dependency for styling the entire program", "Writes an initial config and maintains a steady program state that can be edited through the /.config dir", "Compatible with most standard Linux systems and setups"],
+			features: ["Add, view, and maintain a record of your medications, appointments, and moods", "Titled journal entries with the ability to write whatever you feel in the moment", "A simple installation process to make using the app a breeze!"],
+			src: "https://github.com/jaredreyes039/Med-Manager-TUI",
+			git: "https://github.com/jaredreyes039/Med-Manager-TUI"
+		},
+
 		{
 			title: "LanceIO",
 			desc: "A dashboard designed to make freelancing more manageable and accessible to neurodivergent individuals as well as those who generally need a bit of help staying organized.",
 			highlights: ["A microservice architecture with an Azure managed backend suite", "In-house JWT auth layer", "SQL to NoSQL migration for affordability short-term", "In-house proxy layer using Nginx"],
-			features: ["Tracking, managing, and invoicing freelance orders in one dashboard", "Designed to improve client-contractor relationships for long-term conversions (based on a neurodivergent approach of 'know what I can')", "Income tracking across various currencies as well as plotting to see a general overview of your year of freelancing"]
+			features: ["Tracking, managing, and invoicing freelance orders in one dashboard", "Designed to improve client-contractor relationships for long-term conversions (based on a neurodivergent approach of 'know what I can')", "Income tracking across various currencies as well as plotting to see a general overview of your year of freelancing"],
+			src: "https://lance-io-fe.vercel.app/",
+			git: "https://github.com/jaredreyes039/LanceIO_FE"
+		},
+		{
+			title: "3DS Diagnostic Assistant",
+			desc: "A homebrew application written in C using the devkitarm provided toolchain to display useful diagnostic information about the 3DS from touch screen positioning to determine calibration problems, to battery health checks and networking status. Try it out sometime if you have a homebrewed 3DS you need to repair- the 3DS Diagnostic Assistant may beneficial!",
+			highlights: ["Program developed and produced for the 3DS using the devkitarm toolchain for homebrew application development", "Documentation is sparse so this was a project involving both the dissection and creation of application code.", "My favorite side project thus far- the 3DS ecosystem (and Nintendo more generally) has always been an interest of mine! Maybe I'll make a rom hack sometime?"],
+			features: ["Quick access to diagnostic data for 3DS hardware including joystick, gyroscope, touch, and even 3D-slider calibration", "Access to how the system currently views the battery health to check for battery problems", "Access to more specific network data to diagnose connectivity problems (basic only)"],
+			src: "https://github.com/jaredreyes039/3DSDeviceDiagnosticAssistant",
+			git: "https://github.com/jaredreyes039/3DSDeviceDiagnosticAssistant"
 		},
 		{
 			title: "Rapifly",
 			desc: "**HAS BEEN ABANDONED BY OWNER** Based on an intuitive new approach to project management and problem solving, Rapifly was a dashboard for managing community-oriented projects with the goal of gamififying problem solving for the sake of a better future.",
 			highlights: ["Full migration from a deprecated codebase into a working, modern codebase without changing the original stack", "Migration from a monolith to a microservice-oriented architecture (based on DDD principles)", "Development of most of the backend infrastructure from scratch."],
-			features: ["Tracking, managing, and invoicing freelance orders in one dashboard", "Designed to improve client-contractor relationships for long-term conversions (based on a neurodivergent approach of 'know what I can')", "Income tracking across various currencies as well as plotting to see a general overview of your year of freelancing"]
+			features: ["Tracking, managing, and invoicing freelance orders in one dashboard", "Designed to improve client-contractor relationships for long-term conversions (based on a neurodivergent approach of 'know what I can')", "Income tracking across various currencies as well as plotting to see a general overview of your year of freelancing"],
+			src: "https://jaydevanddesign.com",
+			git: "https://github.com/jaredreyes039/Rapifly"
 		},
-
 	]
 	return (
 		<div className="px-24 mobilesc:max-md:px-6 py-12 mobilesc:max-md:py-3 ultrawide:w-2/3 lg:max-ultrawide:w-full flex flex-col justify-center items-center">
@@ -91,7 +111,7 @@ export default function FeaturedSection(props) {
 				return (<div className="mb-8 flex flex-col w-full items-center justify-center ">
 					<div className="mb-24 mobilesc:max-md:mb-6 flex mobilesc:max-md:flex-col gap-4 w-full justify-center">
 						<Spotlight idx={idx} videos={SAMPLE_VIDEOS} highlights={spotProject.highlights} />
-						<SpotlightText title={spotProject.title} desc={spotProject.desc} features={spotProject.features} />
+						<SpotlightText title={spotProject.title} desc={spotProject.desc} features={spotProject.features} git={spotProject.git} src={spotProject.src} />
 					</div>
 				</div>)
 			})}
