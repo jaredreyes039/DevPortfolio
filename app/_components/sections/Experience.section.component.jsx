@@ -52,7 +52,7 @@ export default function ExperienceSection(props) {
 				numStr="02."
 			/>
 			{EXPERIENCE.map((job) => {
-				return (<div className="mb-12 mobilesc:max-md:mb-6 flex flex-col w-2/3 mobilesc:max-md:w-full">
+				return (<div className="mb-12 mobilesc:max-md:mb-6 flex flex-col w-2/3 mobilesc:max-lg:w-full">
 					<div className="mb-4 flex mobilesc:max-sm:flex-col items-center gap-2 w-full justify-center">
 						<div className="mr-4 mobilesc:max-sm:mr-0 flex w-1/2 mobilesc:max-md:w-full gap-2">
 							<h1 className="font-black text-green-300 ultrawide:text-2xl">{job.location}</h1>

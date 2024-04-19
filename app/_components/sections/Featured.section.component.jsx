@@ -1,6 +1,6 @@
 'use client'
 import SectionHeader from "./SectionHeader.component";
-
+import Image from "next/image"
 
 function SpotlightText(props) {
 	const { title, desc, features } = props;
@@ -34,31 +34,35 @@ function SpotlightText(props) {
 }
 
 function Spotlight(props) {
-	const { videos, highlights, idx } = props;
+	const { videos, highlights, idx, gifs } = props;
 	return (
-		<div className="ultrawide:mr-48 ultrawide:min-h-[540px] mobilesc:max-md:min-h-48 lg:max-ultrawide:mr-0 mb-12 mobilesc:max-md:mb-4 px-12 relative ultrawide:w-1/2 lg:max-ultrawide:w-2/3 mobilesc:max-md:w-full ">
-			<div className="absolute overflow-hidden shadow-inner w-full h-96 mobilesc:max-md:h-fit left-0 top-0 rounded-lg hover:scale-105 hover:border-2 hover:border-green-300 duration-150">
-				<video className="w-full h-full rounded-lg" muted autoPlay>
-					<source src={videos[idx]} type="video/mp4" />
-				</video>
-			</div>
-			<div className="backdrop-blur-lg absolute px-4 py-4 shadow-white drop-shadow-lg ultrawide:w-1/2 lg:max-ultrawide:w-1/3 h-fit ultrawide:-right-48 xl:right-0 mobilesc:max-xl:hidden bottom-0 bg-slate-900 opacity-95 rounded-lg ">
-				<div className="flex mb-4 items-center gap-4 w-full justify-center">
-					<h1 className="text-green-300 ultrawide:text-2xl">Highlights</h1>
-					<hr className="w-full border-t-2 border-green-300"></hr>
+		<div className="ultrawide:mr-48 ultrawide:min-h-[540px] mobilesc:max-md:min-h-48 lg:max-ultrawide:mr-0 mb-12 mobilesc:max-md:mb-4 px-12 relative ultrawide:w-1/2 lg:max-ultrawide:w-2/3 mobilesc:max-mlg:w-full ">
+			<div className="lg:absolute shadow-inner w-full h-96 mobilesc:max-md:h-fit left-0 top-0 rounded-lg hover:scale-105 hover:border-2 hover:border-green-300 duration-150">
+				<div className="w-full h-full rounded-lg">
+					<Image src={gifs[idx].src} alt={gifs[idx].alt} fill />
 				</div>
-				<ul className="list-disc pl-4 min-h-48 max-h-48 overflow-y-scroll">
-					{highlights.map((hl, idx) => {
-						return (
-							<li
-								key={"hl-" + idx}
-								className="ultrawide:text-lg text-green-300 mb-2"
-							>
-								{hl}
-							</li>
-						)
-					})}
-				</ul>
+				{/*<video className="w-full h-full rounded-lg" muted autoPlay>
+					<source src={videos[idx]} type="video/mp4" />
+				</video>*/}
+				<div className="backdrop-blur-lg absolute px-4 py-4 shadow-white drop-shadow-lg ultrawide:w-1/2 lg:max-ultrawide:w-1/3 h-64 -bottom-12 ultrawide:-right-48 xl:right-0 mobilesc:max-xl:hidden bg-slate-900 opacity-95 rounded-lg ">
+					<div className="flex mb-4 items-center gap-4 w-full justify-center">
+						<h1 className="text-green-300 ultrawide:text-2xl">Highlights</h1>
+						<hr className="w-full border-t-2 border-green-300"></hr>
+					</div>
+					<ul className="list-disc pl-4 min-h-48 max-h-48 overflow-y-scroll">
+						{highlights.map((hl, idx) => {
+							return (
+								<li
+									key={"hl-" + idx}
+									className="ultrawide:text-lg text-green-300 mb-2"
+								>
+									{hl}
+								</li>
+							)
+						})}
+					</ul>
+
+				</div>
 
 			</div>
 
@@ -69,6 +73,24 @@ function Spotlight(props) {
 export default function FeaturedSection(props) {
 
 	const SAMPLE_VIDEOS = ['medMang.mp4', 'lanceIOA.mp4', 'diagAssist.mp4', 'rapiflyA.mp4']
+	const GIFS = [
+		{
+			src: "/medMang.gif",
+			alt: "Screen capture of Linux Medication Management TUI"
+		},
+		{
+			src: "/lanceIO.gif",
+			alt: "Screen capture of LanceIO freelance management dashboard"
+		},
+		{
+			src: "/diagAssist.gif",
+			alt: "Screen capture of the 3DS Device Diagnostic Assistant for homebrewed 3DS devices"
+		},
+		{
+			src: "/rapiflyA.gif",
+			alt: "Screen capture of Rapifly, a challenge management platform that gamifies problem-solving to build community wealth and well-being long-term."
+		}
+	]
 	const SPOT_PROJECTS = [
 		{
 			title: "Linux Medication Manager TUI",
@@ -81,7 +103,7 @@ export default function FeaturedSection(props) {
 
 		{
 			title: "LanceIO",
-			desc: "**Ask me about the current style overhaul progress** A dashboard designed to make freelancing more manageable and accessible to neurodivergent individuals as well as those who generally need a bit of help staying organized.",
+			desc: "A dashboard designed to make freelancing more manageable and accessible to neurodivergent individuals as well as those who generally need a bit of help staying organized.",
 			highlights: ["A microservice architecture with an Azure managed backend suite", "In-house JWT auth layer", "SQL to NoSQL migration for affordability short-term", "In-house proxy layer using Nginx"],
 			features: ["Tracking, managing, and invoicing freelance orders in one dashboard", "Designed to improve client-contractor relationships for long-term conversions (based on a neurodivergent approach of 'know what I can')", "Income tracking across various currencies as well as plotting to see a general overview of your year of freelancing"],
 			src: "https://lance-io-fe.vercel.app/",
@@ -109,8 +131,8 @@ export default function FeaturedSection(props) {
 			<SectionHeader numStr="01." title="Building an Accessible World" />
 			{SPOT_PROJECTS.map((spotProject, idx) => {
 				return (<div className="mb-8 flex flex-col w-full items-center justify-center ">
-					<div className="mb-24 mobilesc:max-md:mb-6 flex mobilesc:max-md:flex-col gap-4 w-full justify-center">
-						<Spotlight idx={idx} videos={SAMPLE_VIDEOS} highlights={spotProject.highlights} />
+					<div className="mb-24 mobilesc:max-md:mb-6 flex mobilesc:max-lg:flex-col gap-4 w-full justify-center">
+						<Spotlight idx={idx} gifs={GIFS} videos={SAMPLE_VIDEOS} highlights={spotProject.highlights} />
 						<SpotlightText title={spotProject.title} desc={spotProject.desc} features={spotProject.features} git={spotProject.git} src={spotProject.src} />
 					</div>
 				</div>)

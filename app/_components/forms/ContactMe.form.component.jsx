@@ -58,8 +58,8 @@ export default function ContactMeForm(props) {
 
 	return (
 		<>
-			<div className="flex mobilesc:max-md:flex-col w-full ultrawide:gap-12 justify-center items-center">
-				<div className="ultrawide:w-1/3 xl:w-1/2 xl:mr-6 md:max-ultrawide:w-1/4 mobilesc:max-md:w-full mobilesc:max-md:mb-4">
+			<div className="flex mobilesc:max-lg:flex-col w-full ultrawide:gap-12 justify-center items-center">
+				<div className="ultrawide:w-1/3 w-1/3 xl:mr-6 lg:max-ultrawide:w-1/4 mobilesc:max-lg:w-full mobilesc:max-lg:mb-8">
 					<h1 className="ultrawide:text-4xl ultrawide:mb-4 mobilesc:max-ultrawide:text-2xl text-green-300">Contact Me</h1>
 					<h2 className="ultrawide:text-xl lg:max-ultrawide:text-lg text-white">Looking to bring your small-business to the next level? Maybe you have a hobby you're ready to turn into more than a passion? Whatever the reason, reach out to me and let's see how we can make your presence and experience on the internet that much better!</h2>
 				</div>

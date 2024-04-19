@@ -7,12 +7,12 @@ const Player = dynamic(() => import('@lottiefiles/react-lottie-player').then((lo
 export default function AboutSection(props) {
 
 	return (
-		<div className="px-24 mobilesc:max-md:px-6 py-12 ultrawide:w-2/3 lg:max-ultrawide:w-full flex flex-col justify-center items-center">
+		<div className="px-24 mobilesc:max-lg:px-6 py-12 ultrawide:w-2/3 lg:max-ultrawide:w-full flex flex-col justify-center items-center">
 			<SectionHeader
 				title="This is My Developer Journey"
 				numStr="03."
 			/>
-			<div className="flex mobilesc:max-md:flex-col ultrawide:items-center ultrawide:justify-center ultrawide:w-full ultrawide:mb-12 lg:max-ultrawide:w-full">
+			<div className="flex mobilesc:max-lg:flex-col ultrawide:items-center ultrawide:justify-center ultrawide:w-full ultrawide:mb-12 lg:max-ultrawide:w-full">
 				<div className="ultrawide:w-2/3 lg:max-ultrawide:w-1/3 relative">
 					<div className="ultrawide:w-full z-0">
 						<Player className="utlrawide:width-[100%]" autoplay loop src={'./astronaut.json'} />

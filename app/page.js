@@ -83,16 +83,16 @@ export default function Home() {
       </Navbar>
       <LandingSection setElem={setElem} />
       <div className="w-full flex flex-col items-center justify-center">
-        <Element name="feat">
+        <Element name="feat" className="flex flex-col items-center justify-center w-full">
           <FeaturedSection />
         </Element>
-        <Element name="exp">
+        <Element name="exp" className="flex flex-col items-center justify-center w-full" >
           <ExperienceSection />
         </Element>
-        <Element name="story">
+        <Element name="story" className="flex flex-col items-center justify-center w-full" >
           <AboutSection />
-        </Element>
-        <Element name="contact">
+        </Element  >
+        <Element className="flex flex-col items-center justify-center w-full" name="contact">
           <ContactMeSection toast={toast} />
         </Element>
       </div>
