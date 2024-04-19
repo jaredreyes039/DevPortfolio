@@ -81,7 +81,7 @@ export default function FeaturedSection(props) {
 
 		{
 			title: "LanceIO",
-			desc: "A dashboard designed to make freelancing more manageable and accessible to neurodivergent individuals as well as those who generally need a bit of help staying organized.",
+			desc: "**Ask me about the current style overhaul progress** A dashboard designed to make freelancing more manageable and accessible to neurodivergent individuals as well as those who generally need a bit of help staying organized.",
 			highlights: ["A microservice architecture with an Azure managed backend suite", "In-house JWT auth layer", "SQL to NoSQL migration for affordability short-term", "In-house proxy layer using Nginx"],
 			features: ["Tracking, managing, and invoicing freelance orders in one dashboard", "Designed to improve client-contractor relationships for long-term conversions (based on a neurodivergent approach of 'know what I can')", "Income tracking across various currencies as well as plotting to see a general overview of your year of freelancing"],
 			src: "https://lance-io-fe.vercel.app/",
