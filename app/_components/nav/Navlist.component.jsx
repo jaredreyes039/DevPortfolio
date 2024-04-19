@@ -12,7 +12,7 @@ export default function Navlist(props) {
 	]
 
 	return (
-		<ul className="flex mobilesc:max-md:hidden flex-row justify-evenly items-center w-1/2 px-4">
+		<ul className="flex flex-row justify-evenly items-center w-full px-4">
 			{ROUTES.map((route, idx) => {
 				if (route !== "Contact Me") {
 					return (
