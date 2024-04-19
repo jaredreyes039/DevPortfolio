@@ -47,6 +47,7 @@ export default function Navlist(props) {
 					return (
 						<button
 							className="
+							bg-green-300
 							mobilesc:max-md:hidden
 							rounded-full
 							ultrawide:text-xl
@@ -59,7 +60,6 @@ export default function Navlist(props) {
 							ease-in-out
 							px-8
 							py-4
-							bg-green-300
 							hover:border-2
 							hover:border-white
 							rounded-4

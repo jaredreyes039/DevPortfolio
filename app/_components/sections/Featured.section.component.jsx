@@ -47,7 +47,7 @@ function Spotlight(props) {
 					<h1 className="text-green-300 ultrawide:text-2xl">Highlights</h1>
 					<hr className="w-full border-t-2 border-green-300"></hr>
 				</div>
-				<ul className="list-disc pl-4">
+				<ul className="list-disc pl-4 min-h-48 max-h-48 overflow-y-scroll">
 					{highlights.map((hl, idx) => {
 						return (
 							<li
