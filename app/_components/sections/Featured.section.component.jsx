@@ -106,7 +106,7 @@ export default function FeaturedSection(props) {
 			desc: "A PWA dashboard designed to make freelancing more manageable and accessible to neurodivergent individuals as well as those who generally need a bit of help staying organized.",
 			highlights: ["A microservice architecture with an Azure managed backend suite", "Completely responsive PWA", "SQL to NoSQL migration for affordability short-term", "Minimalist storybook integration for internal documentation"],
 			features: ["Tracking, managing, and invoicing freelance orders in one dashboard", "Designed to improve client-contractor relationships for long-term conversions (based on a neurodivergent approach of 'know what I can')", "Income tracking across various currencies as well as plotting to see a general overview of your year of freelancing"],
-			src: "https://lance-io-fe.vercel.app/",
+			src: "https://lanceio.online/",
 			git: "https://github.com/jaredreyes039/LanceIO_FE"
 		},
 		{
