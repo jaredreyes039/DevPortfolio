@@ -30,7 +30,7 @@ export default function LandingSection(props) {
 				</div>
 				<div className="flex flex-col justify-center w-full bg-shadow h-96 relative">
 					<div className="ultrawide:w-[50%] xl:w-3/4 md:max-xl:w-[85%] mobilesc:max-sm:w-[90%] mobilesc:max-sm:bottom-[45%] absolute z-0 left-[15%] ultrawide:left-[45%] mobilesc:max-lg:left-[35%] lg:max-ultrawide:left-[40%] mobilesc:max-xl:top-[0%] xl:top-[-25%]">
-						<video src={'/lanceMockUp.mp4'} className="w-[40%] md:w-[60%] xl:w-[65%] mobilesc:max-md:w-[80%]" autoPlay loop />
+						<video type="video/mp4" playsInline src={'/lanceMockUp.mp4'} className="w-[40%] md:w-[60%] xl:w-[65%] mobilesc:max-md:w-[80%]" autoPlay loop />
 					</div>
 				</div>
 			</section >
