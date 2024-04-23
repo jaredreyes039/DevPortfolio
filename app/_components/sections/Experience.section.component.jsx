@@ -51,9 +51,9 @@ export default function ExperienceSection(props) {
 				title="Where I've Been Recently"
 				numStr="02."
 			/>
-			{EXPERIENCE.map((job) => {
-				return (<div className="mb-12 mobilesc:max-md:mb-6 flex flex-col mobilesc:w-full">
-					<div className="mb-4 flex mobilesc:max-sm:flex-col items-center gap-2 w-full justify-center">
+			{EXPERIENCE.map((job, idx) => {
+				return (<div key={job.role + idx} className="mb-12 mobilesc:max-md:mb-6 flex flex-col mobilesc:w-full">
+					<div key={job.role + idx * 2} className="mb-4 flex mobilesc:max-sm:flex-col items-center gap-2 w-full justify-center">
 						<div className="mr-4 mobilesc:max-sm:mr-0 flex w-1/2 mobilesc:max-md:w-full gap-2">
 							<h1 className="font-black text-green-300 mobilesc:max-lg:text-lg lg:max-ultrawide:text-xl ultrawide:text-2xl">{job.location}</h1>
 							<em><h1 className="text-green-300 mobilesc:max-lg:text-lg lg:max-ultrawide:text-xl ultrawide:text-2xl">{job.role}</h1></em>
@@ -65,7 +65,7 @@ export default function ExperienceSection(props) {
 					{job.skills.map((skill, idx) => {
 						return (
 							<>
-								<div className="ml-24 mobilesc:max-md:ml-0 w-1/3 mobilesc:max-md:w-full flex justify-between mb-1">
+								<div key={skill.title + idx} className="ml-24 mobilesc:max-md:ml-0 w-1/3 mobilesc:max-md:w-full flex justify-between mb-1">
 									<span className="text-base font-medium text-white">{skill.title}</span>
 									<span className="text-sm font-medium text-white">{skill.percent}</span>
 								</div>
@@ -75,7 +75,7 @@ export default function ExperienceSection(props) {
 							</>
 						)
 					})}
-					<ul className="list-disc ultrawide:w-full lg:max-ultrawide:w-full pl-24 mobilesc:max-md:pl-6">
+					<ul key={idx + 'highlist'} className="list-disc ultrawide:w-full lg:max-ultrawide:w-full pl-24 mobilesc:max-md:pl-6">
 						{job.highlights.map((hl, idx) => {
 							return (
 								<li

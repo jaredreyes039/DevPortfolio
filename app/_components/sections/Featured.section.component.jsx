@@ -6,7 +6,7 @@ function SpotlightText(props) {
 	const { title, desc, features } = props;
 
 	return (
-		<div className="h-fit flex flex-col align-start py-2 px-4 ultrawide:w-full lg:max-ultrawide:w-full">
+		<div className="h-fit lg:min-h-[540px] lg:max-h-[540px] flex flex-col align-start py-2 px-4 ultrawide:w-full lg:max-ultrawide:w-full">
 			<div className="flex items-center gap-4 w-full justify-between mb-4">
 				<h1 className="text-green-300 ultrawide:text-4xl mobilesc:max-ultrawide:text-2xl w-fit ">{title}</h1>
 				<hr className="w-full mobilesc:max-md:w-1/3 border-t-2 border-green-300"></hr>
@@ -24,7 +24,7 @@ function SpotlightText(props) {
 					)
 				})}
 			</ul>
-			<div className="flex flex-col gap-4 w-1/3 mobilesc:max-md:w-full">
+			<div className="flex flex-col mt-auto p-auto gap-4 w-1/3 mobilesc:max-md:w-full">
 				<button className="py-4 px-8 mobilesc:max-md:py-2 mobilesc:max-md:px-4 text-black bg-white rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-green-300 font-bold" onClick={() => { window.location.href = props.src }}>Visit Site</button>
 				<button className="py-4 px-8 mobilesc:max-md:py-2 mobilesc:max-md:px-4 text-black bg-green-300 rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-white font-black" onClick={() => { window.location.href = props.git }}>View Source Code</button>
 
@@ -131,7 +131,7 @@ export default function FeaturedSection(props) {
 			<SectionHeader numStr="01." title="Building an Accessible World" />
 			<div className="grid gap-6 mobilesc:max-lg:gap-6 mobilesc:max-lg:grid-rows-auto mobilesc:max-lg:grid-cols-1 lg:grid-cols-2 lg:grid-rows-2">
 				{SPOT_PROJECTS.map((spotProject, idx) => {
-					return (<div className=" mobilesc:max-md:mb-6 flex flex-col gap-4 w-full ">
+					return (<div key={spotProject.title + idx} className=" mobilesc:max-md:mb-6 flex flex-col gap-4 w-full ">
 						<Spotlight idx={idx} gifs={GIFS} videos={SAMPLE_VIDEOS} highlights={spotProject.highlights} />
 						<SpotlightText title={spotProject.title} desc={spotProject.desc} features={spotProject.features} git={spotProject.git} src={spotProject.src} />
 					</div>

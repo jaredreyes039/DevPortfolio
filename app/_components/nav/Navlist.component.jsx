@@ -19,11 +19,10 @@ export default function Navlist(props) {
 						<button
 							className="
 							mobilesc:max-md:hidden
-							border-2
+							border-b-2
 							border-white
 							ultrawide:text-xl
 							lg:max-xl:text-md
-							rounded-full
 							text-white
 							hover:bg-opacity-15
 							hover:bg-white
@@ -33,7 +32,6 @@ export default function Navlist(props) {
 							px-8
 							py-4
 							duration-100
-							hover:border-2
 							hover:border-green-300
 						"
 							onClick={() => { setElem(route.elem) }}
