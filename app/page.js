@@ -75,7 +75,7 @@ export default function Home() {
   }, [elem])
 
   return (
-    <>
+    <div className="w-full overflow-x-hidden">
       <ToastContainer />
       <Navbar>
         <Navbrand brandText="JayDev&Design" />
@@ -96,6 +96,6 @@ export default function Home() {
           <ContactMeSection toast={toast} />
         </Element>
       </div>
-    </>
+    </div>
   )
 }

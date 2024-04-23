@@ -18,9 +18,9 @@ export default function LandingSection(props) {
 						afterComplete: function(instance) { instance.destroy(); },
 						cursor: false
 					}}>
-						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">Conquering</h1>
-						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">My <span className="mobilesc:leading-loose mobilesc:max-md:tracking-normal text-green-300">Mind</span></h1>
-						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">To <span className="mobilesc:leading-loose mobilesc:max-md:tracking-normal " >Build</span></h1>
+						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">Building</h1>
+						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">An <span className="mobilesc:leading-loose mobilesc:max-md:tracking-normal text-black bg-white px-4 py-2 rounded-lg">Accessible World</span></h1>
+						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">To <span className="mobilesc:leading-loose mobilesc:max-md:tracking-normal " >Achieve</span></h1>
 						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">A <span className="mobilesc:leading-loose mobilesc:max-md:tracking-normal px-4 py-2 mx-2 my-2 rounded-lg bg-grad text-white">Brighter Future</span></h1>
 					</TypeIt>
 					<div className="flex gap-8 mobilesc:max-sm:gap-4">
@@ -29,7 +29,7 @@ export default function LandingSection(props) {
 					</div>
 				</div>
 				<div className="flex flex-col justify-center w-full bg-shadow h-96 relative">
-					<div className="ultrawide:w-[50%] xl:w-3/4 md:max-xl:w-[85%] mobilesc:max-sm:w-[90%] mobilesc:max-sm:bottom-[45%] absolute z-0 left-[15%] ultrawide:left-[45%] mobilesc:max-ultrawide:left-[45%] mobilesc:max-xl:top-[-5%] xl:top-[-25%]">
+					<div className="ultrawide:w-[50%] xl:w-3/4 md:max-xl:w-[85%] mobilesc:max-sm:w-[90%] mobilesc:max-sm:bottom-[45%] absolute z-0 left-[15%] ultrawide:left-[45%] mobilesc:max-lg:left-[35%] lg:max-ultrawide:left-[40%] mobilesc:max-xl:top-[0%] xl:top-[-25%]">
 						<video src={'/lanceMockUp.mp4'} className="w-[40%] md:w-[60%] xl:w-[65%] mobilesc:max-md:w-[80%]" autoPlay loop />
 					</div>
 				</div>

@@ -46,31 +46,31 @@ export default function ExperienceSection(props) {
 	]
 
 	return (
-		<div className="px-24 mobilesc:max-md:px-6 ultrawide:w-2/3 mobilesc:max-ultrawide:w-full flex flex-col justify-center items-center">
+		<div className="px-48 mobilesc:max-md:px-6 mobilesc:w-full flex flex-col justify-center items-center">
 			<SectionHeader
 				title="Where I've Been Recently"
 				numStr="02."
 			/>
 			{EXPERIENCE.map((job) => {
-				return (<div className="mb-12 mobilesc:max-md:mb-6 flex flex-col w-2/3 mobilesc:max-lg:w-full">
+				return (<div className="mb-12 mobilesc:max-md:mb-6 flex flex-col mobilesc:w-full">
 					<div className="mb-4 flex mobilesc:max-sm:flex-col items-center gap-2 w-full justify-center">
 						<div className="mr-4 mobilesc:max-sm:mr-0 flex w-1/2 mobilesc:max-md:w-full gap-2">
-							<h1 className="font-black text-green-300 lg:max-ultrawide:text-xl ultrawide:text-2xl">{job.location}</h1>
-							<em><h1 className="text-green-300 lg:max-ultrawide:text-xl ultrawide:text-2xl">{job.role}</h1></em>
+							<h1 className="font-black text-green-300 mobilesc:max-lg:text-lg lg:max-ultrawide:text-xl ultrawide:text-2xl">{job.location}</h1>
+							<em><h1 className="text-green-300 mobilesc:max-lg:text-lg lg:max-ultrawide:text-xl ultrawide:text-2xl">{job.role}</h1></em>
 						</div>
 						<hr className="w-96 border-t-2 border-green-300 mobilesc:max-md:hidden"></hr>
-						<h1 className="w-96 mobilesc:max-md:w-full ml-4 text-green-300 lg:max-ultrawide:text-xl ultrawide:text-2xl"><TypeIt>{job.timeline}</TypeIt></h1>
+						<h1 className="w-96 mobilesc:max-md:w-full lg:ml-4 mobilesc:max-lg:text-lg  text-green-300 lg:max-ultrawide:text-xl ultrawide:text-2xl"><TypeIt>{job.timeline}</TypeIt></h1>
 
 					</div>
 					{job.skills.map((skill, idx) => {
 						return (
 							<>
-								<div class="ml-24 mobilesc:max-md:ml-0 w-1/3 mobilesc:max-md:w-full flex justify-between mb-1">
-									<span class="text-base font-medium text-white">{skill.title}</span>
-									<span class="text-sm font-medium text-white">{skill.percent}</span>
+								<div className="ml-24 mobilesc:max-md:ml-0 w-1/3 mobilesc:max-md:w-full flex justify-between mb-1">
+									<span className="text-base font-medium text-white">{skill.title}</span>
+									<span className="text-sm font-medium text-white">{skill.percent}</span>
 								</div>
-								<div key={'sk-' + idx} class="ml-24 mobilesc:max-md:ml-0 w-1/3 bg-green-300 rounded-full h-2.5 mb-4 dark:bg-gray-700 mobilesc:max-md:w-full">
-									<div ratio={skill.percent} class="animation-prog bg-green-300 h-2.5 rounded-full dark:bg-gray-300" style={{ width: skill.percent }}></div>
+								<div key={'sk-' + idx} className="ml-24 mobilesc:max-md:ml-0 w-1/3 bg-green-300 rounded-full h-2.5 mb-4 dark:bg-gray-700 mobilesc:max-md:w-full">
+									<div ratio={skill.percent} className="animation-prog bg-green-300 h-2.5 rounded-full dark:bg-gray-300" style={{ width: skill.percent }}></div>
 								</div >
 							</>
 						)
@@ -80,7 +80,7 @@ export default function ExperienceSection(props) {
 							return (
 								<li
 									key={"job-hl-" + idx}
-									className="text-green-300 w-full mb-2 md:max-ultrawide:text-lg  ultrawide:text-xl text-lg mobilesc:max-md:text-sm"
+									className="text-green-300 w-full mb-2 md:max-ultrawide:text-xl ultrawide:text-xl mobilesc:max-md:text-md"
 								>
 									{hl}
 								</li>

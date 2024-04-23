@@ -12,7 +12,7 @@ export default function Navlist(props) {
 	]
 
 	return (
-		<ul className="flex flex-row justify-evenly items-center w-full px-4">
+		<ul className="pointer-events-auto flex flex-row justify-evenly items-center w-full px-4">
 			{ROUTES.map((route, idx) => {
 				if (route.rt !== "Contact Me") {
 					return (
@@ -62,8 +62,6 @@ export default function Navlist(props) {
 							py-4
 							hover:border-2
 							hover:border-white
-							rounded-4
-							duration-100
 						"
 							onClick={() => {
 								setElem(route.elem)
