@@ -61,7 +61,8 @@ export default function ContactMeForm(props) {
 			<div className="flex mobilesc:max-lg:flex-col w-full ultrawide:gap-12 justify-center items-center">
 				<div className="ultrawide:w-1/3 w-1/3 xl:mr-6 lg:max-ultrawide:w-1/4 mobilesc:max-lg:w-full mobilesc:max-lg:mb-8">
 					<h1 className="ultrawide:text-4xl ultrawide:mb-4 mobilesc:max-ultrawide:text-2xl text-green-300">Contact Me</h1>
-					<h2 className="ultrawide:text-xl lg:max-ultrawide:text-lg text-white">Looking to bring your small-business to the next level? Maybe you have a hobby you're ready to turn into more than a passion? Whatever the reason, reach out to me and let's see how we can make your presence and experience on the internet that much better!</h2>
+					<h2 className="mb-4 ultrawide:text-xl lg:max-ultrawide:text-lg text-white">Looking to bring your small-business to the next level? Maybe you have a hobby you're ready to turn into more than a passion? Whatever the reason, reach out to me and let's see how we can make your presence and experience on the internet that much better!</h2>
+					<h2 className="ultrawide:text-xl lg:max-ultrawide:text-lg text-white">Expect a response within 24-48 hours, or up to 72 hours near weekends. Thank you for your time, I look forward to working with you on your next big software project!</h2>
 				</div>
 				{!isLoading && <form className="w-fit mobilesc:max-md:w-full flex flex-col gap-4 " onSubmit={(e) => { handleSubmit(e) }}>
 					<input className="w-96 mobilesc:max-md:w-full bg-black text-green-300 px-8 py-2 mb-2 border-2 border-green-300 rounded-lg" name="firstName" value={firstName} onChange={(e) => { handleChangeFirstName(e) }} placeholder="First Name" type="text" />

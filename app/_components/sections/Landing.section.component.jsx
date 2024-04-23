@@ -12,7 +12,7 @@ export default function LandingSection(props) {
 	return (
 		<>
 			<section className="mobilesc:max-md:mb-6 md:mb-[320px] pt-24 md:pt-48  mobilesc:px-6 md:px-12 py-4 flex flex-1 lg:max-xl:min-h-[320px] mobilesc:max-md:flex-col">
-				<div className="xl:top-[20%] absolute xl:left-1/4 flex flex-col justify-center z-20">
+				<div className="xl:top-[20%] ultrawide:top-[10%] absolute xl:left-1/4 flex flex-col justify-center z-20">
 					<TypeIt className="mb-6 mobilesc:max-md:mb-12" options={{
 						speed: 5,
 						afterComplete: function(instance) { instance.destroy(); },
@@ -29,8 +29,8 @@ export default function LandingSection(props) {
 					</div>
 				</div>
 				<div className="flex flex-col justify-center w-full bg-shadow h-96 relative">
-					<div className="ultrawide:w-5/6 xl:w-3/4 md:max-xl:w-[85%] mobilesc:max-sm:w-[90%] mobilesc:max-sm:bottom-[45%] absolute z-0 left-[15%] mobilesc:max-ultrawide:left-[25%] mobilesc:max-xl:top-[-5%] xl:max-ultrawide:top-[-25%]">
-						<Player className="animation-pulsing w-[40%] md:w-[60%] xl:w-[65%] mobilesc:max-md:w-[80%]" autoplay loop src={'./BipolarBrain.json'} />
+					<div className="ultrawide:w-[50%] xl:w-3/4 md:max-xl:w-[85%] mobilesc:max-sm:w-[90%] mobilesc:max-sm:bottom-[45%] absolute z-0 left-[15%] ultrawide:left-[45%] mobilesc:max-ultrawide:left-[45%] mobilesc:max-xl:top-[-5%] xl:top-[-25%]">
+						<video src={'/lanceMockUp.mp4'} className="w-[40%] md:w-[60%] xl:w-[65%] mobilesc:max-md:w-[80%]" autoPlay loop />
 					</div>
 				</div>
 			</section >

@@ -14,7 +14,7 @@ export default function Navlist(props) {
 	return (
 		<ul className="flex flex-row justify-evenly items-center w-full px-4">
 			{ROUTES.map((route, idx) => {
-				if (route !== "Contact Me") {
+				if (route.rt !== "Contact Me") {
 					return (
 						<button
 							className="

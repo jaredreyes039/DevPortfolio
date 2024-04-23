@@ -6,13 +6,13 @@ function SpotlightText(props) {
 	const { title, desc, features } = props;
 
 	return (
-		<div className="flex flex-col align-start py-2 px-4 ultrawide:w-1/3 lg:max-ultrawide:w-1/4">
+		<div className="h-full flex flex-col align-start py-2 px-4 ultrawide:w-full lg:max-ultrawide:w-full">
 			<div className="flex items-center gap-4 w-full justify-center mb-4">
 				<h1 className="text-green-300 ultrawide:text-4xl mobilesc:max-ultrawide:text-2xl ">{title}</h1>
 				<hr className="w-full mobilesc:max-md:w-1/3 border-t-2 border-green-300"></hr>
 			</div>
 			<p className="ultrawide:text-xl text-white mb-2">{desc}</p>
-			<ul className="list-disc pl-8">
+			<ul className="list-disc lg:pl-8 mobilesc:max-lg:mb-4">
 				{features.map((feat, idx) => {
 					return (
 						<li
@@ -24,7 +24,7 @@ function SpotlightText(props) {
 					)
 				})}
 			</ul>
-			<div className="flex flex-col gap-4 self-end">
+			<div className="flex flex-col gap-4 w-1/3 mobilesc:max-md:w-full">
 				<button className="py-4 px-8 mobilesc:max-md:py-2 mobilesc:max-md:px-4 text-black bg-white rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-green-300 font-bold" onClick={() => { window.location.href = props.src }}>Visit Site</button>
 				<button className="py-4 px-8 mobilesc:max-md:py-2 mobilesc:max-md:px-4 text-black bg-green-300 rounded-full ultrawide:text-xl lg:max-ultrawide:text-md hover:opacity-75 hover:border-2 hover:border-white font-black" onClick={() => { window.location.href = props.git }}>View Source Code</button>
 
@@ -36,15 +36,15 @@ function SpotlightText(props) {
 function Spotlight(props) {
 	const { videos, highlights, idx, gifs } = props;
 	return (
-		<div className="ultrawide:mr-48 ultrawide:min-h-[540px] mobilesc:max-md:min-h-48 lg:max-ultrawide:mr-0 mb-12 mobilesc:max-md:mb-4 px-12 relative ultrawide:w-1/2 lg:max-ultrawide:w-2/3 mobilesc:max-mlg:w-full ">
-			<div className="lg:absolute shadow-inner w-full h-96 mobilesc:max-md:h-fit left-0 top-0 rounded-lg hover:scale-105 hover:border-2 hover:border-green-300 duration-150">
+		<div className=" ultrawide:min-h-[540px] mobilesc:max-md:min-h-48 mobilesc:max-md:mb-4 px-12 relative ultrawide:w-full lg:max-ultrawide:w-full mobilesc:max-mlg:w-full ">
+			<div className="shadow-inner w-full h-96 mobilesc:max-md:h-fit left-0 top-0 rounded-lg hover:border-2 hover:border-green-300 duration-150">
 				<div className="w-full h-full rounded-lg">
 					<Image src={gifs[idx].src} alt={gifs[idx].alt} fill />
 				</div>
 				{/*<video className="w-full h-full rounded-lg" muted autoPlay>
 					<source src={videos[idx]} type="video/mp4" />
 				</video>*/}
-				<div className="backdrop-blur-lg absolute px-4 py-4 shadow-white drop-shadow-lg ultrawide:w-1/2 lg:max-ultrawide:w-1/3 h-64 -bottom-12 ultrawide:-right-48 xl:right-0 mobilesc:max-xl:hidden bg-slate-900 opacity-95 rounded-lg ">
+				{/*<div className="backdrop-blur-lg absolute px-4 py-4 shadow-white drop-shadow-lg ultrawide:w-1/2 lg:max-ultrawide:w-1/3 h-64 -bottom-12 ultrawide:-right-48 xl:right-0 mobilesc:max-xl:hidden bg-slate-900 opacity-95 rounded-lg ">
 					<div className="flex mb-4 items-center gap-4 w-full justify-center">
 						<h1 className="text-green-300 ultrawide:text-2xl">Highlights</h1>
 						<hr className="w-full border-t-2 border-green-300"></hr>
@@ -62,7 +62,7 @@ function Spotlight(props) {
 						})}
 					</ul>
 
-				</div>
+				</div>*/}
 
 			</div>
 
@@ -129,14 +129,15 @@ export default function FeaturedSection(props) {
 	return (
 		<div className="px-24 mobilesc:max-md:px-6 py-12 mobilesc:max-md:py-3 ultrawide:w-2/3 lg:max-ultrawide:w-full flex flex-col justify-center items-center">
 			<SectionHeader numStr="01." title="Building an Accessible World" />
-			{SPOT_PROJECTS.map((spotProject, idx) => {
-				return (<div className="mb-8 flex flex-col w-full items-center justify-center ">
-					<div className="mb-24 mobilesc:max-md:mb-6 flex mobilesc:max-lg:flex-col gap-4 w-full justify-center">
+			<div className="grid gap-6 mobilesc:max-lg:gap-6 mobilesc:max-lg:grid-rows-4 mobilesc:max-lg:grid-cols-1 lg:grid-cols-2 lg:grid-rows-2">
+				{SPOT_PROJECTS.map((spotProject, idx) => {
+					return (<div className="mb-6 mobilesc:max-md:mb-6 flex flex-col gap-4 w-full ">
 						<Spotlight idx={idx} gifs={GIFS} videos={SAMPLE_VIDEOS} highlights={spotProject.highlights} />
 						<SpotlightText title={spotProject.title} desc={spotProject.desc} features={spotProject.features} git={spotProject.git} src={spotProject.src} />
 					</div>
-				</div>)
-			})}
+					)
+				})}
+			</div>
 		</div>
 	)
 }

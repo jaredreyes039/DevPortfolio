@@ -29,7 +29,7 @@ export default function ExperienceSection(props) {
 		},
 		{
 			location: "Freelance Software Engineer",
-			timeline: "07/20-PRESENT",
+			timeline: "11/20-PRESENT",
 			role: "Software Engineer, Web Designer, and Site Admin",
 			highlights: [
 				"Developed various websites to improve conversions for small business",
@@ -55,11 +55,11 @@ export default function ExperienceSection(props) {
 				return (<div className="mb-12 mobilesc:max-md:mb-6 flex flex-col w-2/3 mobilesc:max-lg:w-full">
 					<div className="mb-4 flex mobilesc:max-sm:flex-col items-center gap-2 w-full justify-center">
 						<div className="mr-4 mobilesc:max-sm:mr-0 flex w-1/2 mobilesc:max-md:w-full gap-2">
-							<h1 className="font-black text-green-300 ultrawide:text-2xl">{job.location}</h1>
-							<em><h1 className="text-green-300 ultrawide:text-2xl">{job.role}</h1></em>
+							<h1 className="font-black text-green-300 lg:max-ultrawide:text-xl ultrawide:text-2xl">{job.location}</h1>
+							<em><h1 className="text-green-300 lg:max-ultrawide:text-xl ultrawide:text-2xl">{job.role}</h1></em>
 						</div>
 						<hr className="w-96 border-t-2 border-green-300 mobilesc:max-md:hidden"></hr>
-						<h1 className="w-96 mobilesc:max-md:w-full ml-4 text-green-300 ultrawide:text-2xl"><TypeIt>{job.timeline}</TypeIt></h1>
+						<h1 className="w-96 mobilesc:max-md:w-full ml-4 text-green-300 lg:max-ultrawide:text-xl ultrawide:text-2xl"><TypeIt>{job.timeline}</TypeIt></h1>
 
 					</div>
 					{job.skills.map((skill, idx) => {
@@ -80,7 +80,7 @@ export default function ExperienceSection(props) {
 							return (
 								<li
 									key={"job-hl-" + idx}
-									className="text-green-300 w-full mb-2 ultrawide:text-xl text-lg mobilesc:max-md:text-sm"
+									className="text-green-300 w-full mb-2 md:max-ultrawide:text-lg  ultrawide:text-xl text-lg mobilesc:max-md:text-sm"
 								>
 									{hl}
 								</li>
