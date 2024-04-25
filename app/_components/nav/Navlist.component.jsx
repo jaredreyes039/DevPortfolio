@@ -12,13 +12,13 @@ export default function Navlist(props) {
 	]
 
 	return (
-		<ul className="pointer-events-auto flex flex-row justify-evenly items-center w-full px-4">
+		<ul className="pointer-events-auto flex mobilesc:max-lg:hidden flex-row justify-evenly items-center w-full px-4">
 			{ROUTES.map((route, idx) => {
 				if (route.rt !== "Contact Me") {
 					return (
 						<button
 							className="
-							mobilesc:max-md:hidden
+							mobilesc:max-lg:hidden
 							border-b-2
 							border-white
 							ultrawide:text-xl
@@ -46,7 +46,6 @@ export default function Navlist(props) {
 						<button
 							className="
 							bg-green-300
-							mobilesc:max-md:hidden
 							rounded-full
 							ultrawide:text-xl
 							lg:max-xl:text-md

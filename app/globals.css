@@ -23,6 +23,31 @@ body {
   }
 }
 
+.cursor-animate {
+  animation: cursor 10500ms ease-in-out infinite alternate;
+}
+
+@keyframes cursor {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  20% {
+      transform: translate(50%, -175%);
+  }
+  40% {
+      transform: translate(2000%, -170%);
+  }
+  60% {
+    transform: translate(150%, 1100%);
+  }
+  80% {
+    transform: translate(750%, 1100%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }  
+}
+
 .animation-hover {
   animation: hovering 500ms ease-in-out infinite alternate;
 }

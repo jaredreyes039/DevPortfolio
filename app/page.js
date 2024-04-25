@@ -75,7 +75,7 @@ export default function Home() {
   }, [elem])
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-clip">
       <ToastContainer />
       <Navbar>
         <Navbrand brandText="JayDev&Design" />
