@@ -20,7 +20,7 @@ export default function LandingSection(props) {
 					}}>
 						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">Building</h1>
 						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">An <span className="mobilesc:leading-loose mobilesc:max-md:tracking-normal text-black bg-white px-4 py-2 rounded-lg">Online World</span></h1>
-						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">To <span className="mobilesc:leading-loose mobilesc:max-md:tracking-normal " >Build</span></h1>
+						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">That <span className="mobilesc:leading-loose mobilesc:max-md:tracking-normal " >Promotes</span></h1>
 						<h1 className="mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-7xl mobilesc:text-3xl sm:max-md:text-4xl text-white">A <span className="mobilesc:leading-loose mobilesc:max-md:tracking-normal px-4 py-2 mx-2 my-2 rounded-lg bg-grad text-white">Better World</span></h1>
 					</TypeIt>
 					<div className="flex gap-8 mobilesc:max-sm:gap-4">
