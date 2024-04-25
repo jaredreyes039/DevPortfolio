@@ -12,8 +12,8 @@ export default function LandingSection(props) {
 
 	return (
 		<>
-			<section className="w-full mobilesc:max-md:mb-6 md:mb-24 pt-24 md:pt-48  py-4 flex flex-1 max-h-screen mobilesc:max-sm:h-[720px] min-h-screen mobilesc:max-md:flex-col">
-				<div className="mobilesc:max-sm:px-6 mobilesc:relative sm:absolute z-10 sm:left-24 sm:top-32 mobilesc:max-sm:pt-24 sm:max-xl:top-44 w-full ">
+			<section className="w-full mobilesc:max-md:mb-6 md:mb-24 lg:mb-48 pt-24 md:pt-24  py-4 flex flex-1 max-h-screen mobilesc:max-sm:h-[720px] min-h-[720px] mobilesc:max-md:flex-col">
+				<div className="mobilesc:max-sm:px-6 mobilesc:relative sm:max-xl:absolute z-10 sm:left-24 sm:top-32 mobilesc:max-sm:pt-24 sm:max-xl:top-44 w-full ">
 					<div className="flex w-full flex-col">
 						<div className="flex w-full mb-12">
 							<div className="relative mobilesc:mr-12 sm:mr-24 mobilesc:w-[64px] mobilesc:h-[64px] sm:max-lg:w-[120px] sm:max-lg:h-[120px] lg:w-[240px] lg:h-[240px]">
@@ -37,7 +37,7 @@ export default function LandingSection(props) {
 								SOFTWARE ENGINEER
 							</TypeIt>
 						</h1>
-						<div className="mobilesc:max-sm:w-3/4 sm:max-lg:w-1/2 lg:w-1/4 flex gap-4 mobilesc:max-lg:mb-24 lg:mb-48 items-center justify-between">
+						<div className="mobilesc:max-sm:w-3/4 sm:max-lg:w-1/2 lg:w-1/4 flex gap-4 mobilesc:max-lg:mb-12 lg:mb-24 items-center justify-between">
 							<p className="text-white text-lg">
 								DEVELOPMENT
 							</p>
