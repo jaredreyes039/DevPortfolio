@@ -24,7 +24,7 @@ export default function LandingSection(props) {
 								/>
 							</div>
 							<h1 className="w-1/3 mobilesc:leading-loose mobilesc:max-md:tracking-normal ultrawide:text-8xl md:max-ultrawide:text-9xl mobilesc:max-md:text-6xl text-green-300">
-								<TypeIt>
+								<TypeIt options={{ cursor: false }}>
 									JAY REYES
 								</TypeIt>
 							</h1>
